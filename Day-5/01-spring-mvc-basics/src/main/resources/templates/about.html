@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>About page</title>
+</head>
+<body>
+    <h1>Working with Spring Boot MVC and Thymeleaf</h1>
+    <a th:href="@{/}">Got to home</a>
+    <p th:text="'First name: ' + ${first_name}"></p>
+    <p>Last name: <span th:text="${last_name}"></span></p>
+    <p>Age: <span th:text="${age}"></span></p>
+
+    <p th:if="${age>18}">You are adult</p>
+    <p th:unless="${age>18}">You are child</p>
+
+    <p>Friends List</p>
+    <ol>
+        <li th:each="friend: ${friends}" th:text="${friend}"></li>
+    </ol>
+
+    <h4>Person Detail</h4>
+    <p>Person name: <span th:text="${person.name}"></span></p>
+    <p>Person email: <span th:text="${person.email}"></span></p>
+    <p>Person salary: <span th:text="${person.salary}"></span></p>
+
+    <h4>List of employees</h4>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+        <tr th:each="emp: ${employees}">
+            <td th:text="${emp.name}"></td>
+            <td th:text="${emp.email}"></td>
+            <td th:text="${emp.salary}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

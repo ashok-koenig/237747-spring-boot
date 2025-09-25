@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee registration detail</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Employee Registration Detail</h1>
+    <h4>Name: <span th:text="${employee.name}"></span></h4>
+    <h4>Email: <span th:text="${employee.email}"></span></h4>
+    <h4>Gender: <span th:text="${employee.gender}"></span></h4>
+    <h4>Department: <span th:text="${employee.department}"></span></h4>
+</div>
+</body>
+</html>

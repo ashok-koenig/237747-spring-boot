@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/myscript.js"></script>
+    <style>
+        h2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: green;">Welcome to Spring MVC Application</h1>
+    <a th:href="@{/about}">Got to About page</a>
+    <h2>Working with CSS in Spring MVC</h2>
+    <div class="mydiv">
+        Working with external style sheet in spring mvc
+    </div>
+    <button onclick="clickHandler()">Click me</button>
+    <button onclick="myFunction()">Call My Function</button>
+
+    <img src="/images/pexels-storybyphil-33628135.jpg" alt="Image not found" width="300"/>
+
+<script>
+    function clickHandler(){
+        alert('Working with JavaScript in Spring MVC')
+    }
+</script>
+</body>
+</html>
